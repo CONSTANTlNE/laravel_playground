@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,3 +44,8 @@ require __DIR__.'/auth.php';
 // one method for social login
 Route::get('auth/{provider}/redirect/', [SocialiteController::class, 'redirect'])->name('social.login');
 Route::get('auth/{provider}/callback', [SocialiteController::class, 'callback']);
+
+
+// EXCEPTION PRACTICE
+
+Route::get('/exception',[TestController::class,'index'])->name('exceptions');
